@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     public CheckBox LeftStarting;
     public int LeftStartingInt = 0;
-
     public Button AutoL1Minus;
     public TextView AutoL1;
     public int AutoL1Int = 0;
