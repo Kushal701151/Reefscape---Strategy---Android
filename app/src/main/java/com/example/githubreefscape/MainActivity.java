@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
     public int HumanPlayerInt =0;
     public Button HumanPlayerPlus;
 
+    public Button HumanPlayerAttemptedMinus;
+    public TextView HumanPlayerAttempted;
+    public int HumanPlayerAtttemptedInt =0;
+    public Button HumanPlayerAttemptedPlus;
+
 
     public RadioButton None;
     public RadioButton Parked;
@@ -161,6 +166,10 @@ public class MainActivity extends AppCompatActivity {
         HumanPlayerMinus = (Button) findViewById(R.id.HumanPlayerMinus);
         HumanPlayer = (TextView) findViewById(R.id.HumanPlayer);
         HumanPlayerPlus = (Button) findViewById(R.id.HumanPlayerPlus);
+
+        HumanPlayerAttemptedMinus = (Button) findViewById(R.id.HumanPlayerMinus);
+        HumanPlayerAttempted = (TextView) findViewById(R.id.HumanPlayer);
+        HumanPlayerAttemptedPlus = (Button) findViewById(R.id.HumanPlayerPlus);
 
         None = (RadioButton) findViewById(R.id.none);
         Parked = (RadioButton) findViewById(R.id.Parked);
@@ -359,6 +368,19 @@ public class MainActivity extends AppCompatActivity {
         HumanPlayer.setText(AutoLowerDisplay);
     }
 
+    public void HumanPlayerAttemptedMinus(View view){
+        if ((!HumanPlayerAttempted.getText().toString().equals("0"))&&(HumanPlayerAtttemptedInt!=0)){ //Prevents negative values
+            HumanPlayerAtttemptedInt--;
+            String AutoLowerDisplay = " " + (HumanPlayerAtttemptedInt);
+            HumanPlayerAttempted.setText(AutoLowerDisplay);
+        }
+    }
+    public void HumanPlayerAttemptedPlus (View view){
+        HumanPlayerAtttemptedInt ++;
+        String AutoLowerDisplay = " " + (HumanPlayerAtttemptedInt);
+        HumanPlayerAttempted.setText(AutoLowerDisplay);
+    }
+
     // LeftStarting
     public void LeftStaring(View view){
         if(LeftStarting.isChecked()){
@@ -450,6 +472,7 @@ public class MainActivity extends AppCompatActivity {
                                         + TeleL4Int + ","
                                         + TeleBargeInt + ","
                                         + TeleProcessorInt + ","
+                                        + HumanPlayerAttempted + ","
                                         + HumanPlayerInt + ","
                                         + endgameRadio + ","
                                         + commaRemover(EditTextComments);

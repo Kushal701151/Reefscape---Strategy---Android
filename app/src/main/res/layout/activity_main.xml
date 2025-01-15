@@ -1257,7 +1257,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="5dp" />
+            android:layout_height="15dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -1271,19 +1271,43 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
+                android:layout_weight="0.2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Human Player"
+                android:text="HP Attempted"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
+                android:layout_weight="0.2" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Human Player"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -1312,7 +1336,48 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:id="@+id/HumanAttemptedPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Button
+                android:id="@+id/HumanPlayerAttemptedPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="HumanPlayerAttemptedPlus"
+                android:text="+"
+                android:backgroundTint="@color/orange"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/HumanAttemptedPlayerMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="HumanPlayerAttemptedMinus"
+                android:text="-"
+                android:backgroundTint="@color/orange"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
 
             <TextView
                 android:id="@+id/HumanPlayer"
@@ -1325,7 +1390,7 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.07" />
+                android:layout_weight="0.2" />
 
             <Button
                 android:id="@+id/HumanPlayerPlus"
@@ -1340,6 +1405,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <Space
