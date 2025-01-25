@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
     public RadioButton Deep;
     public int endgameRadio = 0;
 
-
     public EditText EditTextComments;
     public Button done;
     @Override
