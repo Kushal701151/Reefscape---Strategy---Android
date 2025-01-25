@@ -1,4 +1,6 @@
 package com.example.githubreefscape;
 
-public class SettingsActivity {
+import android.app.Activity;
+
+public class SettingsActivity extends Activity {
 }
