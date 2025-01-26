@@ -11,6 +11,10 @@ import android.widget.TextView;
 import android.view.View;
 import android.util.DisplayMetrics;
 import android.content.Intent;
+import java.util.Dictionary;
+import android.content.SharedPreferences;
+import java.util.HashMap;
+
 
 public class MainActivity extends AppCompatActivity {
     public EditText StudentName;
@@ -93,10 +97,11 @@ public class MainActivity extends AppCompatActivity {
     public RadioButton Shallow;
     public RadioButton Deep;
     public int endgameRadio = 0;
-
-
+    public HashMap <String, String> historydict;
     public EditText EditTextComments;
     public Button done;
+
+    public String data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -453,7 +458,6 @@ public class MainActivity extends AppCompatActivity {
                     (dialog, which) -> {
                         dialog.dismiss();
 
-                        String data;
                         data =
                                 commaRemover(StudentName) + ","
                                         + TeamNumber.getText().toString() + ","
@@ -481,6 +485,15 @@ public class MainActivity extends AppCompatActivity {
                         dataSend.putExtra("dat", data);
                         startActivity(dataSend);
                     });
+
+            //addded string to local file
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("myStringKey", data);
+            editor.apply();
+
+            //history code
+            historydict.put(MatchNumber.toString(), data);
             alertDialog.show();
         }
     }
