@@ -1,5 +1,6 @@
 package com.example.githubreefscape;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class SettingsActivity extends Activity {
     public RadioButton colorLight;
     public int colorRadio = 1;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
