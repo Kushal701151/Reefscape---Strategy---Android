@@ -39,21 +39,21 @@ public class SettingsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_settings);
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenwidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
 
 
-        autoDisable = (CheckBox) findViewById(R.id.autoDisable);
-        teleDisable = (CheckBox) findViewById(R.id.teleDisable);
-        endgameDisable = (CheckBox) findViewById(R.id.endgameDisable);
-        coralDisable = (CheckBox) findViewById(R.id.coralDisable);
-        algaeDisable = (CheckBox) findViewById(R.id.algaeDisable);
-        parkDisable = (CheckBox) findViewById(R.id.parkDisable);
-        databaseEnable = (CheckBox) findViewById(R.id.databaseEnable);
-        hpDisable = (CheckBox) findViewById(R.id.hpDisable);
+        autoDisable = (CheckBox) findViewById(R.id.autoDisableID);
+        teleDisable = (CheckBox) findViewById(R.id.teleDisableID);
+        endgameDisable = (CheckBox) findViewById(R.id.endgameDisableID);
+        coralDisable = (CheckBox) findViewById(R.id.coralDisableID);
+        algaeDisable = (CheckBox) findViewById(R.id.algaeDisableID);
+        parkDisable = (CheckBox) findViewById(R.id.parkDisableID);
+        databaseEnable = (CheckBox) findViewById(R.id.databaseEnableID);
+        hpDisable = (CheckBox) findViewById(R.id.hpDisableID);
     }
 
     public void autoDisable(View view) {
