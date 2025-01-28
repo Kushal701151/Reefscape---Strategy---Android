@@ -1,5 +1,6 @@
 package com.example.githubreefscape;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class SettingsActivity extends Activity {
     public RadioButton colorLight;
     public int colorRadio = 1;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,14 +48,14 @@ public class SettingsActivity extends Activity {
         int screenHeight = displayMetrics.heightPixels;
 
 
-        autoDisable = (CheckBox) findViewById(R.id.autoDisable);
-        teleDisable = (CheckBox) findViewById(R.id.teleDisable);
-        endgameDisable = (CheckBox) findViewById(R.id.endgameDisable);
-        coralDisable = (CheckBox) findViewById(R.id.coralDisable);
-        algaeDisable = (CheckBox) findViewById(R.id.algaeDisable);
-        parkDisable = (CheckBox) findViewById(R.id.parkDisable);
-        databaseEnable = (CheckBox) findViewById(R.id.databaseEnable);
-        hpDisable = (CheckBox) findViewById(R.id.hpDisable);
+        autoDisable = (CheckBox) findViewById(R.id.autoDisableID);
+        teleDisable = (CheckBox) findViewById(R.id.teleDisableID);
+        endgameDisable = (CheckBox) findViewById(R.id.endgameDisableID);
+        coralDisable = (CheckBox) findViewById(R.id.coralDisableID);
+        algaeDisable = (CheckBox) findViewById(R.id.algaeDisableID);
+        parkDisable = (CheckBox) findViewById(R.id.parkDisableID);
+        databaseEnable = (CheckBox) findViewById(R.id.databaseEnableID);
+        hpDisable = (CheckBox) findViewById(R.id.hpDisableID);
     }
 
     public void autoDisable(View view) {
