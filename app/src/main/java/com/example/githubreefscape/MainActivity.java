@@ -3,6 +3,7 @@ package com.example.githubreefscape;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -10,6 +11,9 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.view.View;
 import android.util.DisplayMetrics;
+import android.content.Intent;
+import java.util.ArrayList;
+
 import android.content.Intent;
 import java.util.Dictionary;
 import android.content.SharedPreferences;
@@ -116,8 +120,75 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        Intent intent = getIntent();
+        ArrayList<String> historicallist = intent.getStringArrayListExtra("historicallist");
         // Update other fields as needed
+        // Update UI elements
+        Log.d("MainActivity", "onResume triggered");
+
+        if (historicallist != null && historicallist.size() >= 20) {
+            GlobalDictionary.StudentName.setText(historicallist.get(0));
+            GlobalDictionary.TeamNumber.setText(historicallist.get(1));
+            GlobalDictionary.MatchNumber.setText(historicallist.get(2));
+
+            GlobalDictionary.LeftStartingInt = Integer.parseInt(historicallist.get(2));
+            if (GlobalDictionary.LeftStartingInt== 1){
+                GlobalDictionary.LeftStarting.setChecked(true);
+            }
+
+            GlobalDictionary.AutoL1Int = Integer.parseInt(historicallist.get(3));
+            GlobalDictionary.AutoL2Int = Integer.parseInt(historicallist.get(4));
+            GlobalDictionary.AutoL3Int = Integer.parseInt(historicallist.get(5));
+            GlobalDictionary.AutoL4Int = Integer.parseInt(historicallist.get(6));
+            GlobalDictionary.AutoL1.setText(String.valueOf(GlobalDictionary.AutoL1Int));
+            GlobalDictionary.AutoL2.setText(String.valueOf(GlobalDictionary.AutoL2Int));
+            GlobalDictionary.AutoL3.setText(String.valueOf(GlobalDictionary.AutoL3Int));
+            GlobalDictionary.AutoL4.setText(String.valueOf(GlobalDictionary.AutoL4Int));
+
+            GlobalDictionary.AutoBargeInt = Integer.parseInt(historicallist.get(7));
+            GlobalDictionary.AutoProcessorInt = Integer.parseInt(historicallist.get(8));
+            GlobalDictionary.AutoBarge.setText(String.valueOf(GlobalDictionary.AutoBargeInt));
+            GlobalDictionary.AutoProcessor.setText(String.valueOf(GlobalDictionary.AutoProcessorInt));
+
+            GlobalDictionary.DefenseInt = Integer.parseInt(historicallist.get(9));
+            if (GlobalDictionary.DefenseInt== 1){
+                GlobalDictionary.Defense.setChecked(true);
+            }
+
+            GlobalDictionary.TeleL1Int = Integer.parseInt(historicallist.get(10));
+            GlobalDictionary.TeleL2Int = Integer.parseInt(historicallist.get(11));
+            GlobalDictionary.TeleL3Int = Integer.parseInt(historicallist.get(12));
+            GlobalDictionary.TeleL4Int = Integer.parseInt(historicallist.get(13));
+            GlobalDictionary.TeleL1.setText(String.valueOf(GlobalDictionary.TeleL1Int));
+            GlobalDictionary.TeleL2.setText(String.valueOf(GlobalDictionary.TeleL2Int));
+            GlobalDictionary.TeleL3.setText(String.valueOf(GlobalDictionary.TeleL3Int));
+            GlobalDictionary.TeleL4.setText(String.valueOf(GlobalDictionary.TeleL4Int));
+
+            GlobalDictionary.TeleBargeInt = Integer.parseInt(historicallist.get(14));
+            GlobalDictionary.TeleProcessorInt = Integer.parseInt(historicallist.get(15));
+            GlobalDictionary.TeleBarge.setText(String.valueOf(GlobalDictionary.TeleBargeInt));
+            GlobalDictionary.TeleProcessor.setText(String.valueOf(GlobalDictionary.TeleProcessorInt));
+
+            GlobalDictionary.HumanPlayerAtttemptedInt = Integer.parseInt(historicallist.get(16));
+            GlobalDictionary.HumanPlayerInt = Integer.parseInt(historicallist.get(17));
+            GlobalDictionary.HumanPlayerAttempted.setText(String.valueOf(GlobalDictionary.HumanPlayerAtttemptedInt));
+            GlobalDictionary.HumanPlayer.setText(String.valueOf(GlobalDictionary.HumanPlayerInt));
+
+            GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(18));
+            if (GlobalDictionary.endgameRadio == 0) {
+                GlobalDictionary.None.setChecked(true);
+            } else if (GlobalDictionary.endgameRadio == 1) {
+                GlobalDictionary.Parked.setChecked(true);
+            } else if (GlobalDictionary.endgameRadio == 2) {
+                GlobalDictionary.Shallow.setChecked(true);
+            } else if (GlobalDictionary.endgameRadio == 3) {
+                GlobalDictionary.Deep.setChecked(true);
+            }
+            MainActivity.GlobalDictionary.StudentName.setText(historicallist.get(19));        } else {
+            // Handle error if the list is empty or smaller than expected
+        }
+
+
     }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
