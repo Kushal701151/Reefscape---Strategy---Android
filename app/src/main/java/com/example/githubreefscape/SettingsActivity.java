@@ -56,77 +56,52 @@ public class SettingsActivity extends Activity {
         parkDisable = (CheckBox) findViewById(R.id.parkDisableID);
         databaseEnable = (CheckBox) findViewById(R.id.databaseEnableID);
         hpDisable = (CheckBox) findViewById(R.id.hpDisableID);
+
+        autoDisable.setOnClickListener(this::toggleAutoDisable);
+        teleDisable.setOnClickListener(this::toggleTeleDisable);
+        endgameDisable.setOnClickListener(this::toggleEndgameDisable);
+        coralDisable.setOnClickListener(this::toggleCoralDisable);
+        algaeDisable.setOnClickListener(this::toggleAlgaeDisable);
+        parkDisable.setOnClickListener(this::toggleParkDisable);
+        hpDisable.setOnClickListener(this::toggleHpDisable);
+        databaseEnable.setOnClickListener(this::toggleDatabaseEnable);
+        colorLight.setOnClickListener(this::toggleColorRadio);
+        colorDark.setOnClickListener(this::toggleColorRadio);
     }
 
-    public void autoDisable(View view) {
-        if (autoDisable.isChecked()) {
-            autoDisableInt = 1;
-        } else {
-            autoDisableInt = 0;
-        }
+    public void toggleAutoDisable(View view) {
+        autoDisableInt = autoDisable.isChecked() ? 1 : 0;
     }
 
-    public void teleDisable(View view) {
-        if (teleDisable.isChecked()) {
-            teleDisableInt = 1;
-        } else {
-            teleDisableInt = 0;
-        }
+    public void toggleTeleDisable(View view) {
+        teleDisableInt = teleDisable.isChecked() ? 1 : 0;
     }
 
-    public void endgameDisable(View view) {
-        if (endgameDisable.isChecked()) {
-            endgameDisableInt = 1;
-        } else {
-            endgameDisableInt = 0;
-        }
+    public void toggleEndgameDisable(View view) {
+        endgameDisableInt = endgameDisable.isChecked() ? 1 : 0;
     }
 
-    public void coralDisable(View view) {
-        if (coralDisable.isChecked()) {
-            coralDisableInt = 1;
-        } else {
-            coralDisableInt = 0;
-        }
+    public void toggleCoralDisable(View view) {
+        coralDisableInt = coralDisable.isChecked() ? 1 : 0;
     }
 
-    public void algaeDisable(View view) {
-        if (algaeDisable.isChecked()) {
-            algaeDisableInt = 1;
-        } else {
-            algaeDisableInt = 0;
-        }
+    public void toggleAlgaeDisable(View view) {
+        algaeDisableInt = algaeDisable.isChecked() ? 1 : 0;
     }
 
-    public void parkDisable(View view) {
-        if (autoDisable.isChecked()) {
-            autoDisableInt = 1;
-        } else {
-            autoDisableInt = 0;
-        }
+    public void toggleParkDisable(View view) {
+        parkDisableInt = parkDisable.isChecked() ? 1 : 0;
     }
 
-    public void hpDisable(View view) {
-        if (hpDisable.isChecked()) {
-            hpDisableInt = 1;
-        } else {
-            hpDisableInt = 0;
-        }
+    public void toggleHpDisable(View view) {
+        hpDisableInt = hpDisable.isChecked() ? 1 : 0;
     }
 
-    public void databaseEnable(View view) {
-        if (databaseEnable.isChecked()) {
-            databaseEnableInt = 1;
-        } else {
-            databaseEnableInt = 0;
-        }
+    public void toggleDatabaseEnable(View view) {
+        databaseEnableInt = databaseEnable.isChecked() ? 1 : 0;
     }
 
-    public void colorRadioGroup(View view) {
-        if (colorLight.isChecked()) {
-            colorRadio = 0;
-        } else if (colorDark.isChecked()) {
-            colorRadio = 1;
-        }
+    public void toggleColorRadio(View view) {
+        colorRadio = colorLight.isChecked() ? 0 : 1;
     }
 }
