@@ -263,7 +263,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Return to Home Page"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:backgroundTint="@color/orange"/>
 
             <Space
                 android:layout_width="20dp"
