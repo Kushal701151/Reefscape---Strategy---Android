@@ -201,7 +201,7 @@
                 android:text="Colors"
                 android:textAlignment="center"
                 android:textSize="30dp"
-                android:textColor="@color/white"/>/>
+                android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
@@ -247,9 +247,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
-
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <Button
+                android:id="@+id/homeID"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Return to Home Page"
+                android:textAlignment="center" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
 
 
     </LinearLayout>
