@@ -41,16 +41,19 @@ public class HistoryActivity extends AppCompatActivity {
 
     }
     public void Submit(View view){
-        historystring = MainActivity.GlobalDictionary.historydict.get(Keyfinder);
+
+
+        historystring = MainActivity.GlobalDictionary.historydict.get(Keyfinder.getText().toString());
         String[] parts = historystring.split(",");
         // Convert the array into a List named historicallist
         ArrayList<String> historicallist = new ArrayList<>(Arrays.asList(parts));
 
 
-        Intent intent = new Intent(HistoryActivity.this, MainActivity.class);
-        intent.putStringArrayListExtra("historicallist", historicallist);
+        Intent pager = new Intent(HistoryActivity.this, MainActivity.class);
+        pager.putExtra("FROM_WINDOW", "Historical");  // Add extra identifying the source
+        pager.putStringArrayListExtra("historicallist", historicallist);
         // Start the activity
-        startActivity(intent);
+        startActivity(pager);
     }
 
 }

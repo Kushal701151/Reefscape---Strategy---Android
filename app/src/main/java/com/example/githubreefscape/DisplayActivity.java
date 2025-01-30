@@ -71,6 +71,7 @@ public class DisplayActivity extends AppCompatActivity{
 
     public void onNextMatch(View view) {
         Intent back = new Intent(this, MainActivity.class);
+        back.putExtra("FROM_WINDOW", "Display");  // Add extra identifying the source
         startActivity(back);
     }
 

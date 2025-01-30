@@ -10,10 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+            <Button
+                android:id="@+id/HistoryAcess"
+                android:onClick="onHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="History"
+                android:textSize="30dp"
+                android:backgroundTint="@color/History"/>
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -41,14 +55,7 @@
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:layout_weight="1"/>
-           <Button
-               android:id="@+id/HistoryAcess"
-               android:onClick="onHistory"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:text="History"
-               android:textSize="30dp"
-               android:backgroundTint="@color/orange"/>
+
            <Space
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
@@ -1358,10 +1365,10 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/HumanPlayerMinus"
+                android:id="@+id/HumanPlayerAttemptedMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="HumanPlayerMinus"
+                android:onClick="HumanPlayerAttemptedMinus"
                 android:text="-"
                 android:backgroundTint="@color/orange"
                 android:textSize="30sp" />
@@ -1399,10 +1406,10 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/HumanAttemptedPlayerMinus"
+                android:id="@+id/HumanPlayerMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="HumanPlayerAttemptedMinus"
+                android:onClick="HumanPlayerMinus"
                 android:text="-"
                 android:backgroundTint="@color/orange"
                 android:textSize="30sp" />
