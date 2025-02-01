@@ -59,28 +59,22 @@ public class SettingsActivity extends Activity {
         colorLight.setOnClickListener(this::toggleColorRadio);
         colorDark.setOnClickListener(this::toggleColorRadio);
     }
-
-
     public void toggleAutoDisable(View view) {
         autoDisableInt = autoDisable.isChecked() ? 1 : 0;
         disableAutoFeatures(!autoDisable.isChecked());
     }
-
     public void toggleTeleDisable(View view) {
         teleDisableInt = teleDisable.isChecked() ? 1 : 0;
         disableTeleFeatures(!teleDisable.isChecked());
     }
-
     public void toggleEndgameDisable(View view) {
         endgameDisableInt = endgameDisable.isChecked() ? 1 : 0;
         disableEndgameFeatures(!endgameDisable.isChecked());
     }
-
     public void toggleCoralDisable(View view) {
         coralDisableInt = coralDisable.isChecked() ? 1 : 0;
         disableCoralFeatures(!coralDisable.isChecked());
     }
-
     public void toggleAlgaeDisable(View view) {
         algaeDisableInt = algaeDisable.isChecked() ? 1 : 0;
         disableAlgaeFeatures(!algaeDisable.isChecked());
@@ -90,17 +84,14 @@ public class SettingsActivity extends Activity {
         parkDisableInt = parkDisable.isChecked() ? 1 : 0;
         disableParkFeatures(!parkDisable.isChecked());
     }
-
     public void toggleHpDisable(View view) {
         hpDisableInt = hpDisable.isChecked() ? 1 : 0;
         disableHpFeatures(!hpDisable.isChecked());
     }
-
     public void toggleDatabaseEnable(View view) {
         databaseEnableInt = databaseEnable.isChecked() ? 1 : 0;
         disableDatabaseFeatures(!databaseEnable.isChecked());
     }
-
     public void toggleColorRadio(View view) {
         colorRadio = colorLight.isChecked() ? 0 : 1;
         updateColorScheme();
