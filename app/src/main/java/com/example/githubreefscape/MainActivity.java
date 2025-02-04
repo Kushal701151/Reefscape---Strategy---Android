@@ -18,6 +18,9 @@ import android.content.Intent;
 import java.util.ArrayList;
 import org.json.JSONObject;
 import org.json.JSONObject;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 
 
 import android.content.Intent;
@@ -664,14 +667,10 @@ public class MainActivity extends AppCompatActivity {
 
             SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            JSONObject jsonObject = new JSONObject(GlobalDictionary.historydict);
-            String jsonString = jsonObject.toString();
-
-            editor.putString("dictionaryKey", jsonString);
+            Gson gson = new Gson();
+            String json = gson.toJson(GlobalDictionary.historydict);
+            editor.putString("dictionaryKey", json);
             editor.apply();
-
-
-
 
             alertDialog.show();
         }
