@@ -22,9 +22,11 @@ import java.util.List;
 
 
 
+
 public class HistoryActivity extends AppCompatActivity {
     public EditText Keyfinder;
     public Button HSubmit;
+    int tracker = 1;
 
     public String historystring;
 
@@ -42,18 +44,38 @@ public class HistoryActivity extends AppCompatActivity {
     }
     public void Submit(View view){
 
-
-        historystring = MainActivity.GlobalDictionary.historydict.get(Keyfinder.getText().toString());
-        String[] parts = historystring.split(",");
-        // Convert the array into a List named historicallist
-        ArrayList<String> historicallist = new ArrayList<>(Arrays.asList(parts));
+        if(MainActivity.GlobalDictionary.keylist.contains(Keyfinder.getText().toString())){
+            tracker = 0;
+        }
 
 
+
+        if(tracker==0){
+            historystring = MainActivity.GlobalDictionary.historydict.get(Keyfinder.getText().toString());
+            String[] parts = historystring.split(",");
+            // Convert the array into a List named historicallist
+            ArrayList<String> historicallist = new ArrayList<>(Arrays.asList(parts));
+
+
+            Intent pager = new Intent(HistoryActivity.this, MainActivity.class);
+            pager.putExtra("FROM_WINDOW", "Historical");  // Add extra identifying the source
+            pager.putStringArrayListExtra("historicallist", historicallist);
+            // Start the activity
+            startActivity(pager);
+        } else if (tracker ==1) {
+            android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(HistoryActivity.this).create();
+            alertDialog.setTitle("Alert");
+            alertDialog.setMessage("you did not enter any history number");
+            alertDialog.show();
+        }
+
+    }
+
+    public void Return(View view){
         Intent pager = new Intent(HistoryActivity.this, MainActivity.class);
-        pager.putExtra("FROM_WINDOW", "Historical");  // Add extra identifying the source
-        pager.putStringArrayListExtra("historicallist", historicallist);
-        // Start the activity
+        pager.putExtra("FROM_WINDOW", "Display");
         startActivity(pager);
+
     }
 
 }

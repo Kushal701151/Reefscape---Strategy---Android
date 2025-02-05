@@ -24,6 +24,7 @@ import android.content.Intent;
 import java.util.Dictionary;
 import android.content.SharedPreferences;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
       public static EditText TeamNumber;
       public static HashMap<String, String> historydict = new HashMap<>();
+      public static List<String> keylist = new ArrayList<>();;
       public static int LeftStartingInt = 0;
       public static int endgameRadio = 0;
       public static int HumanPlayerInt =0;
@@ -614,28 +616,6 @@ public class MainActivity extends AppCompatActivity {
             //addded string to local file
 
 
-            Log.d("Debug", "StudentName: " + GlobalDictionary.StudentName.getText().toString());
-            Log.d("Debug", "TeamNumber: " + GlobalDictionary.TeamNumber.getText().toString());
-            Log.d("Debug", "MatchNumber: " + GlobalDictionary.MatchNumber.getText().toString());
-            Log.d("Debug", "LeftStartingInt: " + GlobalDictionary.LeftStartingInt);
-            Log.d("Debug", "AutoL1Int: " + GlobalDictionary.AutoL1Int);
-            Log.d("Debug", "AutoL2Int: " + GlobalDictionary.AutoL2Int);
-            Log.d("Debug", "AutoL3Int: " + GlobalDictionary.AutoL3Int);
-            Log.d("Debug", "AutoL4Int: " + GlobalDictionary.AutoL4Int);
-            Log.d("Debug", "AutoBargeInt: " + GlobalDictionary.AutoBargeInt);
-            Log.d("Debug", "AutoProcessorInt: " + GlobalDictionary.AutoProcessorInt);
-            Log.d("Debug", "DefenseInt: " + GlobalDictionary.DefenseInt);
-            Log.d("Debug", "TeleL1Int: " + GlobalDictionary.TeleL1Int);
-            Log.d("Debug", "TeleL2Int: " + GlobalDictionary.TeleL2Int);
-            Log.d("Debug", "TeleL3Int: " + GlobalDictionary.TeleL3Int);
-            Log.d("Debug", "TeleL4Int: " + GlobalDictionary.TeleL4Int);
-            Log.d("Debug", "TeleBargeInt: " + GlobalDictionary.TeleBargeInt);
-            Log.d("Debug", "TeleProcessorInt: " + GlobalDictionary.TeleProcessorInt);
-            Log.d("Debug", "HumanPlayerAtttemptedInt: " + GlobalDictionary.HumanPlayerAtttemptedInt);
-            Log.d("Debug", "HumanPlayerInt: " + GlobalDictionary.HumanPlayerInt);
-            Log.d("Debug", "EndgameRadio: " + GlobalDictionary.endgameRadio);
-            Log.d("Debug", "EditTextComments: " + GlobalDictionary.EditTextComments.getText().toString());
-
             String Hdata = GlobalDictionary.StudentName.getText().toString() + ","
                     + GlobalDictionary.TeamNumber.getText().toString() + ","
                     + GlobalDictionary.MatchNumber.getText().toString() + ","
@@ -660,6 +640,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("Mydata", Hdata);
             //history code
             GlobalDictionary.historydict.put(GlobalDictionary.MatchNumber.getText().toString(), Hdata);
+            GlobalDictionary.keylist.add(GlobalDictionary.MatchNumber.getText().toString());
             Log.d("ListCheck", "List contents: " + GlobalDictionary.historydict.toString());
 
             SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
