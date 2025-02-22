@@ -53,7 +53,7 @@ public class DisplayActivity extends AppCompatActivity{
         }
 
         // Prepare data for QR code
-        data = "R3," + data + "|";
+        data = data + "|";
         dataToText.setText(data);
 
         // Generate QR code
