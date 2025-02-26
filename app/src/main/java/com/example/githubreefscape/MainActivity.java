@@ -68,34 +68,35 @@ public class MainActivity extends AppCompatActivity {
     public Button HumanPlayerAttemptedMinus;
     public Button HumanPlayerAttemptedPlus;
 
-    public  EditText StudentName;
-    public  CheckBox Defense;
-    public  EditText MatchNumber;
-    public  EditText EditTextComments;
-    public TextView HumanPlayerAttempted;
-    public  TextView HumanPlayer;
-    public  TextView TeleBarge;
-    public  TextView TeleProcessor;
-    public  TextView TeleL4;
-    public  TextView TeleL3;
-    public  TextView TeleL2;
-    public  TextView TeleL1;
-    public  TextView AutoL4;
-    public  TextView AutoL3;
-    public  TextView AutoL2;
-    public  TextView AutoL1;
-    public  RadioButton None;
-    public  RadioButton Parked;
-    public  RadioButton Shallow;
-    public  RadioButton Deep;
-    public  TextView AutoProcessor;
-    public  TextView AutoBarge;
-    public  CheckBox LeftStarting;
 
-    public  EditText TeamNumber;
 
 
   public static class GlobalDictionary {
+      public static EditText StudentName;
+      public static CheckBox Defense;
+      public static EditText MatchNumber;
+      public static EditText EditTextComments;
+      public static TextView HumanPlayerAttempted;
+      public static TextView HumanPlayer;
+      public static TextView TeleBarge;
+      public static TextView TeleProcessor;
+      public static TextView TeleL4;
+      public static TextView TeleL3;
+      public static TextView TeleL2;
+      public static TextView TeleL1;
+      public static TextView AutoL4;
+      public static TextView AutoL3;
+      public static TextView AutoL2;
+      public static TextView AutoL1;
+      public static RadioButton None;
+      public static RadioButton Parked;
+      public static RadioButton Shallow;
+      public static RadioButton Deep;
+      public static TextView AutoProcessor;
+      public static TextView AutoBarge;
+      public static CheckBox LeftStarting;
+
+      public static EditText TeamNumber;
       public static HashMap<String, String> historydict = new HashMap<>();
       public static List<String> keylist = new ArrayList<>();;
       public static int LeftStartingInt = 0;
@@ -133,64 +134,64 @@ public class MainActivity extends AppCompatActivity {
             // Update other fields as needed
             // Update UI elements
             if (historicallist != null && historicallist.size() >= 20) {
-                StudentName.setText(historicallist.get(0));
-                TeamNumber.setText(historicallist.get(1));
-                MatchNumber.setText(historicallist.get(2));
+                GlobalDictionary.StudentName.setText(historicallist.get(0));
+                GlobalDictionary.TeamNumber.setText(historicallist.get(1));
+                GlobalDictionary.MatchNumber.setText(historicallist.get(2));
 
                 GlobalDictionary.LeftStartingInt = Integer.parseInt(historicallist.get(2));
                 if (GlobalDictionary.LeftStartingInt== 1){
-                    LeftStarting.setChecked(true);
+                    GlobalDictionary.LeftStarting.setChecked(true);
                 }
 
                 GlobalDictionary.AutoL1Int = Integer.parseInt(historicallist.get(3));
                 GlobalDictionary.AutoL2Int = Integer.parseInt(historicallist.get(4));
                 GlobalDictionary.AutoL3Int = Integer.parseInt(historicallist.get(5));
                 GlobalDictionary.AutoL4Int = Integer.parseInt(historicallist.get(6));
-                AutoL1.setText(String.valueOf(GlobalDictionary.AutoL1Int));
-                AutoL2.setText(String.valueOf(GlobalDictionary.AutoL2Int));
-                AutoL3.setText(String.valueOf(GlobalDictionary.AutoL3Int));
-                AutoL4.setText(String.valueOf(GlobalDictionary.AutoL4Int));
+                GlobalDictionary.AutoL1.setText(String.valueOf(GlobalDictionary.AutoL1Int));
+                GlobalDictionary.AutoL2.setText(String.valueOf(GlobalDictionary.AutoL2Int));
+                GlobalDictionary.AutoL3.setText(String.valueOf(GlobalDictionary.AutoL3Int));
+                GlobalDictionary.AutoL4.setText(String.valueOf(GlobalDictionary.AutoL4Int));
 
                 GlobalDictionary.AutoBargeInt = Integer.parseInt(historicallist.get(7));
                 GlobalDictionary.AutoProcessorInt = Integer.parseInt(historicallist.get(8));
-                AutoBarge.setText(String.valueOf(GlobalDictionary.AutoBargeInt));
-                AutoProcessor.setText(String.valueOf(GlobalDictionary.AutoProcessorInt));
+                GlobalDictionary.AutoBarge.setText(String.valueOf(GlobalDictionary.AutoBargeInt));
+                GlobalDictionary.AutoProcessor.setText(String.valueOf(GlobalDictionary.AutoProcessorInt));
 
                 GlobalDictionary.DefenseInt = Integer.parseInt(historicallist.get(9));
                 if (GlobalDictionary.DefenseInt== 1){
-                    Defense.setChecked(true);
+                    GlobalDictionary.Defense.setChecked(true);
                 }
 
                 GlobalDictionary.TeleL1Int = Integer.parseInt(historicallist.get(10));
                 GlobalDictionary.TeleL2Int = Integer.parseInt(historicallist.get(11));
                 GlobalDictionary.TeleL3Int = Integer.parseInt(historicallist.get(12));
                 GlobalDictionary.TeleL4Int = Integer.parseInt(historicallist.get(13));
-                TeleL1.setText(String.valueOf(GlobalDictionary.TeleL1Int));
-                TeleL2.setText(String.valueOf(GlobalDictionary.TeleL2Int));
-                TeleL3.setText(String.valueOf(GlobalDictionary.TeleL3Int));
-                TeleL4.setText(String.valueOf(GlobalDictionary.TeleL4Int));
+                GlobalDictionary.TeleL1.setText(String.valueOf(GlobalDictionary.TeleL1Int));
+                GlobalDictionary.TeleL2.setText(String.valueOf(GlobalDictionary.TeleL2Int));
+                GlobalDictionary.TeleL3.setText(String.valueOf(GlobalDictionary.TeleL3Int));
+                GlobalDictionary.TeleL4.setText(String.valueOf(GlobalDictionary.TeleL4Int));
 
                 GlobalDictionary.TeleBargeInt = Integer.parseInt(historicallist.get(14));
                 GlobalDictionary.TeleProcessorInt = Integer.parseInt(historicallist.get(15));
-                TeleBarge.setText(String.valueOf(GlobalDictionary.TeleBargeInt));
-                TeleProcessor.setText(String.valueOf(GlobalDictionary.TeleProcessorInt));
+                GlobalDictionary.TeleBarge.setText(String.valueOf(GlobalDictionary.TeleBargeInt));
+                GlobalDictionary.TeleProcessor.setText(String.valueOf(GlobalDictionary.TeleProcessorInt));
 
                 GlobalDictionary.HumanPlayerAtttemptedInt = Integer.parseInt(historicallist.get(16));
                 GlobalDictionary.HumanPlayerInt = Integer.parseInt(historicallist.get(17));
-                HumanPlayerAttempted.setText(String.valueOf(GlobalDictionary.HumanPlayerAtttemptedInt));
-                HumanPlayer.setText(String.valueOf(GlobalDictionary.HumanPlayerInt));
+                GlobalDictionary.HumanPlayerAttempted.setText(String.valueOf(GlobalDictionary.HumanPlayerAtttemptedInt));
+                GlobalDictionary.HumanPlayer.setText(String.valueOf(GlobalDictionary.HumanPlayerInt));
 
                 GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(18));
                 if (GlobalDictionary.endgameRadio == 0) {
-                    None.setChecked(true);
+                    GlobalDictionary.None.setChecked(true);
                 } else if (GlobalDictionary.endgameRadio == 1) {
-                    Parked.setChecked(true);
+                    GlobalDictionary.Parked.setChecked(true);
                 } else if (GlobalDictionary.endgameRadio == 2) {
-                    Shallow.setChecked(true);
+                    GlobalDictionary.Shallow.setChecked(true);
                 } else if (GlobalDictionary.endgameRadio == 3) {
-                    Deep.setChecked(true);
+                    GlobalDictionary.Deep.setChecked(true);
                 }
-                EditTextComments.setText(historicallist.get(19));
+                GlobalDictionary.EditTextComments.setText(historicallist.get(19));
             } else {
                 // Handle error if the list is empty or smaller than expected
             }
@@ -223,279 +224,280 @@ public class MainActivity extends AppCompatActivity {
         int screenwidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
 
-        StudentName = (EditText) findViewById(R.id.StudentName);
-        MatchNumber = (EditText) findViewById(R.id.MatchNumber);
-        TeamNumber = (EditText) findViewById(R.id.TeamNumber);
 
-        LeftStarting= (CheckBox) findViewById(R.id.LeftStarting);
+        GlobalDictionary.StudentName = (EditText) findViewById(R.id.StudentName);
+        GlobalDictionary.MatchNumber = (EditText) findViewById(R.id.MatchNumber);
+        GlobalDictionary.TeamNumber = (EditText) findViewById(R.id.TeamNumber);
+
+        GlobalDictionary.LeftStarting= (CheckBox) findViewById(R.id.LeftStarting);
         historyselect = (Button) findViewById(R.id.HistoryAcess);
 
         AutoL1Minus = (Button) findViewById(R.id.AutoL1Minus);
-        AutoL1 = (TextView) findViewById(R.id.AutoL1);
+        GlobalDictionary.AutoL1 = (TextView) findViewById(R.id.AutoL1);
         AutoL1Plus = (Button) findViewById(R.id.AutoL1Plus);
 
         AutoL2Minus = (Button) findViewById(R.id.AutoL2Minus);
-        AutoL2 = (TextView) findViewById(R.id.AutoL2);
+        GlobalDictionary.AutoL2 = (TextView) findViewById(R.id.AutoL2);
         AutoL2Plus = (Button) findViewById(R.id.AutoL2Plus);
 
         AutoL3Minus = (Button) findViewById(R.id.AutoL3Minus);
-        AutoL3 = (TextView) findViewById(R.id.AutoL3);
+        GlobalDictionary.AutoL3 = (TextView) findViewById(R.id.AutoL3);
         AutoL3Plus = (Button) findViewById(R.id.AutoL3Plus);
 
         AutoL4Minus = (Button) findViewById(R.id.AutoL4Minus);
-        AutoL4 = (TextView) findViewById(R.id.AutoL4);
+        GlobalDictionary.AutoL4 = (TextView) findViewById(R.id.AutoL4);
         AutoL4Plus = (Button) findViewById(R.id.AutoL4Plus);
 
         AutoBargeMinus = (Button) findViewById(R.id.AutoBargeMinus);
-        AutoBarge = (TextView) findViewById(R.id.AutoBarge);
+        GlobalDictionary. AutoBarge = (TextView) findViewById(R.id.AutoBarge);
         AutoBargePlus = (Button) findViewById(R.id.AutoBargePlus);
 
         AutoProcessorMinus = (Button) findViewById(R.id.AutoProcessorMinus);
-        AutoProcessor = (TextView) findViewById(R.id.AutoProcessor);
+        GlobalDictionary.AutoProcessor = (TextView) findViewById(R.id.AutoProcessor);
         AutoProcessorPlus = (Button) findViewById(R.id.AutoProcessorPlus);
 
-        Defense= (CheckBox) findViewById(R.id.Defense);
+        GlobalDictionary.Defense= (CheckBox) findViewById(R.id.Defense);
 
         TeleL1Minus = (Button) findViewById(R.id.TeleL1Minus);
-        TeleL1 = (TextView) findViewById(R.id.TeleL1);
+        GlobalDictionary.TeleL1 = (TextView) findViewById(R.id.TeleL1);
         TeleL1Plus = (Button) findViewById(R.id.TeleL1Plus);
 
         TeleL2Minus = (Button) findViewById(R.id.TeleL2Minus);
-        TeleL2 = (TextView) findViewById(R.id.TeleL2);
+        GlobalDictionary.TeleL2 = (TextView) findViewById(R.id.TeleL2);
         TeleL2Plus = (Button) findViewById(R.id.TeleL2Plus);
 
         TeleL3Minus = (Button) findViewById(R.id.TeleL3Minus);
-        TeleL3 = (TextView) findViewById(R.id.TeleL3);
+        GlobalDictionary.TeleL3 = (TextView) findViewById(R.id.TeleL3);
         TeleL3Plus = (Button) findViewById(R.id.TeleL3Plus);
 
         TeleL4Minus = (Button) findViewById(R.id.TeleL4Minus);
-        TeleL4 = (TextView) findViewById(R.id.TeleL4);
+        GlobalDictionary.TeleL4 = (TextView) findViewById(R.id.TeleL4);
         TeleL4Plus = (Button) findViewById(R.id.TeleL4Plus);
 
         TeleBargeMinus = (Button) findViewById(R.id.TeleBargeMinus);
-        TeleBarge = (TextView) findViewById(R.id.TeleBarge);
+        GlobalDictionary.TeleBarge = (TextView) findViewById(R.id.TeleBarge);
         TeleBargePlus = (Button) findViewById(R.id.TeleBargePlus);
 
         TeleProcessorMinus = (Button) findViewById(R.id.TeleProcessorMinus);
-        TeleProcessor = (TextView) findViewById(R.id.TeleProcessor);
+        GlobalDictionary.TeleProcessor = (TextView) findViewById(R.id.TeleProcessor);
         TeleProcessorPlus = (Button) findViewById(R.id.TeleProcessorPlus);
-        HumanPlayerMinus = (Button) findViewById(R.id.HumanPlayerMinus);
 
-        HumanPlayer = (TextView) findViewById(R.id.HumanPlayer);
+        HumanPlayerMinus = (Button) findViewById(R.id.HumanPlayerMinus);
+        GlobalDictionary.HumanPlayer = (TextView) findViewById(R.id.HumanPlayer);
         HumanPlayerPlus = (Button) findViewById(R.id.HumanPlayerPlus);
 
         HumanPlayerAttemptedMinus = (Button) findViewById(R.id.HumanPlayerAttemptedMinus);
-        HumanPlayerAttempted = (TextView) findViewById(R.id.HumanAttemptedPlayer);
+        GlobalDictionary.HumanPlayerAttempted = (TextView) findViewById(R.id.HumanAttemptedPlayer);
         HumanPlayerAttemptedPlus = (Button) findViewById(R.id.HumanPlayerAttemptedPlus);
 
-        None = (RadioButton) findViewById(R.id.none);
-        Parked = (RadioButton) findViewById(R.id.Parked);
-        Shallow = (RadioButton) findViewById(R.id.Shallow);
-        Deep = (RadioButton) findViewById(R.id.Deep);
+        GlobalDictionary.None = (RadioButton) findViewById(R.id.none);
+        GlobalDictionary.Parked = (RadioButton) findViewById(R.id.Parked);
+        GlobalDictionary.Shallow = (RadioButton) findViewById(R.id.Shallow);
+        GlobalDictionary.Deep = (RadioButton) findViewById(R.id.Deep);
 
-        EditTextComments = (EditText) findViewById(R.id.EditTextComments);
+        GlobalDictionary.EditTextComments = (EditText) findViewById(R.id.EditTextComments);
         done= (Button) findViewById(R.id.done);
     }
 
     // Auto Levels 1-4
     public void AutoL1Minus(View view){
-        if ((!AutoL1.getText().toString().equals("0"))&&(GlobalDictionary.AutoL1Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoL1.getText().toString().equals("0"))&&(GlobalDictionary.AutoL1Int!=0)){ //Prevents negative values
             GlobalDictionary.AutoL1Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoL1Int);
-            AutoL1.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoL1.setText(AutoLowerDisplay);
         }
     }
 
     public void AutoL1Plus(View view){
         GlobalDictionary.AutoL1Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoL1Int);
-        AutoL1.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoL1.setText(AutoLowerDisplay);
     }
 
     public void AutoL2Minus(View view){
-        if ((!AutoL2.getText().toString().equals("0"))&&(GlobalDictionary.AutoL2Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoL2.getText().toString().equals("0"))&&(GlobalDictionary.AutoL2Int!=0)){ //Prevents negative values
             GlobalDictionary.AutoL2Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoL2Int);
-            AutoL2.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoL2.setText(AutoLowerDisplay);
         }
     }
 
     public void AutoL2Plus(View view){
         GlobalDictionary.AutoL2Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoL2Int);
-        AutoL2.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoL2.setText(AutoLowerDisplay);
     }
     public void AutoL3Minus(View view){
-        if ((!AutoL3.getText().toString().equals("0"))&&(GlobalDictionary.AutoL3Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoL3.getText().toString().equals("0"))&&(GlobalDictionary.AutoL3Int!=0)){ //Prevents negative values
             GlobalDictionary.AutoL3Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoL3Int);
-            AutoL3.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoL3.setText(AutoLowerDisplay);
         }
     }
 
     public void AutoL3Plus(View view){
         GlobalDictionary.AutoL3Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoL3Int);
-        AutoL3.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoL3.setText(AutoLowerDisplay);
     }
 
     public void AutoL4Minus(View view){
-        if ((!AutoL4.getText().toString().equals("0"))&&(GlobalDictionary.AutoL4Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoL4.getText().toString().equals("0"))&&(GlobalDictionary.AutoL4Int!=0)){ //Prevents negative values
             GlobalDictionary.AutoL4Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoL4Int);
-            AutoL4.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoL4.setText(AutoLowerDisplay);
         }
     }
 
     public void AutoL4Plus(View view){
         GlobalDictionary.AutoL4Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoL4Int);
-        AutoL4.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoL4.setText(AutoLowerDisplay);
     }
 
     // Auto Barge
 
 
     public void AutoBargeMinus(View view){
-        if ((!AutoBarge.getText().toString().equals("0"))&&(GlobalDictionary.AutoBargeInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoBarge.getText().toString().equals("0"))&&(GlobalDictionary.AutoBargeInt!=0)){ //Prevents negative values
             GlobalDictionary.AutoBargeInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoBargeInt);
-            AutoBarge.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoBarge.setText(AutoLowerDisplay);
         }
     }
     public void AutoBargePlus (View view){
         GlobalDictionary.AutoBargeInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoBargeInt);
-        AutoBarge.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoBarge.setText(AutoLowerDisplay);
     }
 
     // Auto Processor
     public void AutoProcessorMinus(View view){
-        if ((!AutoProcessor.getText().toString().equals("0"))&&(GlobalDictionary.AutoProcessorInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.AutoProcessor.getText().toString().equals("0"))&&(GlobalDictionary.AutoProcessorInt!=0)){ //Prevents negative values
             GlobalDictionary.AutoProcessorInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.AutoProcessorInt);
-            AutoProcessor.setText(AutoLowerDisplay);
+            GlobalDictionary.AutoProcessor.setText(AutoLowerDisplay);
         }
     }
     public void AutoProcessorPlus (View view){
         GlobalDictionary.AutoProcessorInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.AutoProcessorInt);
-        AutoProcessor.setText(AutoLowerDisplay);
+        GlobalDictionary.AutoProcessor.setText(AutoLowerDisplay);
     }
 
 
 
     // Tele Levels 1-4
     public void TeleL1Minus(View view){
-        if ((!TeleL1.getText().toString().equals("0"))&&(GlobalDictionary.TeleL1Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleL1.getText().toString().equals("0"))&&(GlobalDictionary.TeleL1Int!=0)){ //Prevents negative values
             GlobalDictionary.TeleL1Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleL1Int);
-            TeleL1.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleL1.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleL1Plus(View view){
         GlobalDictionary.TeleL1Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleL1Int);
-        TeleL1.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleL1.setText(AutoLowerDisplay);
     }
 
     public void TeleL2Minus(View view){
-        if ((!TeleL2.getText().toString().equals("0"))&&(GlobalDictionary.TeleL2Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleL2.getText().toString().equals("0"))&&(GlobalDictionary.TeleL2Int!=0)){ //Prevents negative values
             GlobalDictionary.TeleL2Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleL2Int);
-            TeleL2.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleL2.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleL2Plus(View view){
         GlobalDictionary.TeleL2Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleL2Int);
-        TeleL2.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleL2.setText(AutoLowerDisplay);
     }
     public void TeleL3Minus(View view){
-        if ((!TeleL3.getText().toString().equals("0"))&&(GlobalDictionary.TeleL3Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleL3.getText().toString().equals("0"))&&(GlobalDictionary.TeleL3Int!=0)){ //Prevents negative values
             GlobalDictionary.TeleL3Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleL3Int);
-            TeleL3.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleL3.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleL3Plus(View view){
         GlobalDictionary.TeleL3Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleL3Int);
-        TeleL3.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleL3.setText(AutoLowerDisplay);
     }
 
     public void TeleL4Minus(View view){
-        if ((!TeleL4.getText().toString().equals("0"))&&(GlobalDictionary.TeleL4Int!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleL4.getText().toString().equals("0"))&&(GlobalDictionary.TeleL4Int!=0)){ //Prevents negative values
             GlobalDictionary.TeleL4Int--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleL4Int);
-            TeleL4.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleL4.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleL4Plus(View view){
         GlobalDictionary.TeleL4Int ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleL4Int);
-        TeleL4.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleL4.setText(AutoLowerDisplay);
     }
 
     // Tele Barge
     public void TeleBargeMinus(View view){
-        if ((!TeleBarge.getText().toString().equals("0"))&&(GlobalDictionary.TeleBargeInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleBarge.getText().toString().equals("0"))&&(GlobalDictionary.TeleBargeInt!=0)){ //Prevents negative values
             GlobalDictionary.TeleBargeInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleBargeInt);
-            TeleBarge.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleBarge.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleBargePlus (View view){
         GlobalDictionary.TeleBargeInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleBargeInt);
-        TeleBarge.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleBarge.setText(AutoLowerDisplay);
     }
 
     // Tele Processor
     public void TeleProcessorMinus(View view){
-        if ((!TeleProcessor.getText().toString().equals("0"))&&(GlobalDictionary.TeleProcessorInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.TeleProcessor.getText().toString().equals("0"))&&(GlobalDictionary.TeleProcessorInt!=0)){ //Prevents negative values
             GlobalDictionary.TeleProcessorInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.TeleProcessorInt);
-            TeleProcessor.setText(AutoLowerDisplay);
+            GlobalDictionary.TeleProcessor.setText(AutoLowerDisplay);
         }
     }
 
     public void TeleProcessorPlus (View view){
         GlobalDictionary.TeleProcessorInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.TeleProcessorInt);
-        TeleProcessor.setText(AutoLowerDisplay);
+        GlobalDictionary.TeleProcessor.setText(AutoLowerDisplay);
     }
 
     //Tele Human Player
     public void HumanPlayerMinus(View view){
-        if ((!HumanPlayer.getText().toString().equals("0"))&&(GlobalDictionary.HumanPlayerInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.HumanPlayer.getText().toString().equals("0"))&&(GlobalDictionary.HumanPlayerInt!=0)){ //Prevents negative values
             GlobalDictionary.HumanPlayerInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.HumanPlayerInt);
-            HumanPlayer.setText(AutoLowerDisplay);
+            GlobalDictionary.HumanPlayer.setText(AutoLowerDisplay);
         }
     }
     public void HumanPlayerPlus (View view){
         GlobalDictionary.HumanPlayerInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.HumanPlayerInt);
-        HumanPlayer.setText(AutoLowerDisplay);
+        GlobalDictionary.HumanPlayer.setText(AutoLowerDisplay);
     }
 
     public void HumanPlayerAttemptedMinus(View view){
-        if ((!HumanPlayerAttempted.getText().toString().equals("0"))&&(GlobalDictionary.HumanPlayerAtttemptedInt!=0)){ //Prevents negative values
+        if ((!GlobalDictionary.HumanPlayerAttempted.getText().toString().equals("0"))&&(GlobalDictionary.HumanPlayerAtttemptedInt!=0)){ //Prevents negative values
             GlobalDictionary.HumanPlayerAtttemptedInt--;
             String AutoLowerDisplay = " " + (GlobalDictionary.HumanPlayerAtttemptedInt);
-            HumanPlayerAttempted.setText(AutoLowerDisplay);
+            GlobalDictionary.HumanPlayerAttempted.setText(AutoLowerDisplay);
         }
     }
     public void HumanPlayerAttemptedPlus (View view){
         GlobalDictionary.HumanPlayerAtttemptedInt ++;
         String AutoLowerDisplay = " " + (GlobalDictionary.HumanPlayerAtttemptedInt);
-        HumanPlayerAttempted.setText(AutoLowerDisplay);
+        GlobalDictionary.HumanPlayerAttempted.setText(AutoLowerDisplay);
     }
 
     public void onHistory (View view){
@@ -508,7 +510,7 @@ public class MainActivity extends AppCompatActivity {
 
     // LeftStarting
     public void LeftStaring(View view){
-        if(LeftStarting.isChecked()){
+        if(GlobalDictionary.LeftStarting.isChecked()){
             GlobalDictionary.LeftStartingInt = 1;
         }
         else{
@@ -519,7 +521,7 @@ public class MainActivity extends AppCompatActivity {
     // Defense
 
     public void Defense (View view){
-        if (Defense.isChecked()){
+        if (GlobalDictionary.Defense.isChecked()){
             GlobalDictionary.DefenseInt = 1;
         }
         else {
@@ -529,13 +531,13 @@ public class MainActivity extends AppCompatActivity {
 
     // Endgame Radio Group
     public void endgameRadioGroup(View view) {
-        if (None.isChecked()) {
+        if (GlobalDictionary.None.isChecked()) {
             GlobalDictionary.endgameRadio = 0;
-        } else if (Parked.isChecked()) {
+        } else if (GlobalDictionary.Parked.isChecked()) {
             GlobalDictionary.endgameRadio = 1;
-        } else if (Shallow.isChecked()) {
+        } else if (GlobalDictionary.Shallow.isChecked()) {
             GlobalDictionary.endgameRadio = 2;
-        } else if (Deep.isChecked()) {
+        } else if (GlobalDictionary.Deep.isChecked()) {
             GlobalDictionary.endgameRadio = 3;
         }
     }
@@ -543,14 +545,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean fieldChecker() {
         String fieldIncomplete = "";
 
-        if (StudentName.getText().toString().equals("") || (StudentName.getText().toString().equals(" "))) {
+        if (GlobalDictionary.StudentName.getText().toString().equals("") || (GlobalDictionary.StudentName.getText().toString().equals(" "))) {
             fieldIncomplete = " \n\tStudent Name ";
         }
 
-        if (TeamNumber.getText().toString().equals("")) {
+        if (GlobalDictionary.TeamNumber.getText().toString().equals("")) {
             fieldIncomplete = fieldIncomplete + "\n\tTeam Number, ";
         }
-        if (MatchNumber.getText().toString().equals("")) {
+        if (GlobalDictionary.MatchNumber.getText().toString().equals("")) {
             fieldIncomplete = fieldIncomplete + "\n\tMatch Number, ";
         }
         if (!fieldIncomplete.equals("")) {
@@ -562,8 +564,8 @@ public class MainActivity extends AppCompatActivity {
         } else return true;
     }
     public String commaRemover(EditText editText){
-        if(EditTextComments.getText().toString().isEmpty()){
-            EditTextComments.setText("0");
+        if(GlobalDictionary.EditTextComments.getText().toString().isEmpty()){
+            GlobalDictionary.EditTextComments.setText("0");
         }
 
         return editText.getText().toString().replace(","," ");
@@ -584,9 +586,9 @@ public class MainActivity extends AppCompatActivity {
                         dialog.dismiss();
 
                          data =
-                                StudentName.getText().toString() + ","
-                                        + TeamNumber.getText().toString() + ","
-                                        + MatchNumber.getText().toString() + ","
+                                GlobalDictionary.StudentName.getText().toString() + ","
+                                        + GlobalDictionary.TeamNumber.getText().toString() + ","
+                                        + GlobalDictionary.MatchNumber.getText().toString() + ","
                                         + GlobalDictionary.LeftStartingInt + ","
                                         + GlobalDictionary.AutoL1Int + ","
                                         + GlobalDictionary.AutoL2Int + ","
@@ -604,7 +606,7 @@ public class MainActivity extends AppCompatActivity {
                                         + GlobalDictionary.HumanPlayerAtttemptedInt + ","
                                         + GlobalDictionary.HumanPlayerInt + ","
                                         + GlobalDictionary.endgameRadio + ","
-                                        + EditTextComments.getText().toString();
+                                        + GlobalDictionary.EditTextComments.getText().toString();
 
                         Intent dataSend = new Intent(MainActivity.this, DisplayActivity.class); //Sends data to "Display Activity"
                         dataSend.putExtra("dat", data);
@@ -614,9 +616,9 @@ public class MainActivity extends AppCompatActivity {
             //addded string to local file
 
 
-            String Hdata = StudentName.getText().toString() + ","
-                    + TeamNumber.getText().toString() + ","
-                    + MatchNumber.getText().toString() + ","
+            String Hdata = GlobalDictionary.StudentName.getText().toString() + ","
+                    + GlobalDictionary.TeamNumber.getText().toString() + ","
+                    + GlobalDictionary.MatchNumber.getText().toString() + ","
                     + GlobalDictionary.LeftStartingInt + ","
                     + GlobalDictionary.AutoL1Int + ","
                     + GlobalDictionary.AutoL2Int + ","
@@ -634,11 +636,11 @@ public class MainActivity extends AppCompatActivity {
                     + GlobalDictionary.HumanPlayerAtttemptedInt + ","
                     + GlobalDictionary.HumanPlayerInt + ","
                     + GlobalDictionary.endgameRadio + ","
-                    + EditTextComments.getText().toString();
+                    + GlobalDictionary.EditTextComments.getText().toString();
             Log.d("Mydata", Hdata);
             //history code
-            GlobalDictionary.historydict.put(MatchNumber.getText().toString(), Hdata);
-            GlobalDictionary.keylist.add(MatchNumber.getText().toString());
+            GlobalDictionary.historydict.put(GlobalDictionary.MatchNumber.getText().toString(), Hdata);
+            GlobalDictionary.keylist.add(GlobalDictionary.MatchNumber.getText().toString());
             Log.d("ListCheck", "List contents: " + GlobalDictionary.historydict.toString());
 
             SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
