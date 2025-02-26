@@ -137,50 +137,52 @@ public class MainActivity extends AppCompatActivity {
                 TeamNumber.setText(historicallist.get(1));
                 MatchNumber.setText(historicallist.get(2));
 
-                GlobalDictionary.LeftStartingInt = Integer.parseInt(historicallist.get(2));
+                GlobalDictionary.LeftStartingInt = Integer.parseInt(historicallist.get(3));
+                Log.d( "DefenseInt: ", String.valueOf(GlobalDictionary.DefenseInt));
                 if (GlobalDictionary.LeftStartingInt== 1){
                     LeftStarting.setChecked(true);
                 }
 
-                GlobalDictionary.AutoL1Int = Integer.parseInt(historicallist.get(3));
-                GlobalDictionary.AutoL2Int = Integer.parseInt(historicallist.get(4));
-                GlobalDictionary.AutoL3Int = Integer.parseInt(historicallist.get(5));
-                GlobalDictionary.AutoL4Int = Integer.parseInt(historicallist.get(6));
+                GlobalDictionary.AutoL1Int = Integer.parseInt(historicallist.get(4));
+                GlobalDictionary.AutoL2Int = Integer.parseInt(historicallist.get(5));
+                GlobalDictionary.AutoL3Int = Integer.parseInt(historicallist.get(6));
+                GlobalDictionary.AutoL4Int = Integer.parseInt(historicallist.get(7));
                 AutoL1.setText(String.valueOf(GlobalDictionary.AutoL1Int));
                 AutoL2.setText(String.valueOf(GlobalDictionary.AutoL2Int));
                 AutoL3.setText(String.valueOf(GlobalDictionary.AutoL3Int));
                 AutoL4.setText(String.valueOf(GlobalDictionary.AutoL4Int));
 
-                GlobalDictionary.AutoBargeInt = Integer.parseInt(historicallist.get(7));
-                GlobalDictionary.AutoProcessorInt = Integer.parseInt(historicallist.get(8));
+                GlobalDictionary.AutoBargeInt = Integer.parseInt(historicallist.get(8));
+                GlobalDictionary.AutoProcessorInt = Integer.parseInt(historicallist.get(9));
                 AutoBarge.setText(String.valueOf(GlobalDictionary.AutoBargeInt));
                 AutoProcessor.setText(String.valueOf(GlobalDictionary.AutoProcessorInt));
 
-                GlobalDictionary.DefenseInt = Integer.parseInt(historicallist.get(9));
+                GlobalDictionary.DefenseInt = Integer.parseInt(historicallist.get(10));
+                Log.d( "DefenseInt: ", String.valueOf(GlobalDictionary.DefenseInt));
                 if (GlobalDictionary.DefenseInt== 1){
                     Defense.setChecked(true);
                 }
 
-                GlobalDictionary.TeleL1Int = Integer.parseInt(historicallist.get(10));
-                GlobalDictionary.TeleL2Int = Integer.parseInt(historicallist.get(11));
-                GlobalDictionary.TeleL3Int = Integer.parseInt(historicallist.get(12));
-                GlobalDictionary.TeleL4Int = Integer.parseInt(historicallist.get(13));
+                GlobalDictionary.TeleL1Int = Integer.parseInt(historicallist.get(11));
+                GlobalDictionary.TeleL2Int = Integer.parseInt(historicallist.get(12));
+                GlobalDictionary.TeleL3Int = Integer.parseInt(historicallist.get(13));
+                GlobalDictionary.TeleL4Int = Integer.parseInt(historicallist.get(14));
                 TeleL1.setText(String.valueOf(GlobalDictionary.TeleL1Int));
                 TeleL2.setText(String.valueOf(GlobalDictionary.TeleL2Int));
                 TeleL3.setText(String.valueOf(GlobalDictionary.TeleL3Int));
                 TeleL4.setText(String.valueOf(GlobalDictionary.TeleL4Int));
 
-                GlobalDictionary.TeleBargeInt = Integer.parseInt(historicallist.get(14));
-                GlobalDictionary.TeleProcessorInt = Integer.parseInt(historicallist.get(15));
+                GlobalDictionary.TeleBargeInt = Integer.parseInt(historicallist.get(15));
+                GlobalDictionary.TeleProcessorInt = Integer.parseInt(historicallist.get(16));
                 TeleBarge.setText(String.valueOf(GlobalDictionary.TeleBargeInt));
                 TeleProcessor.setText(String.valueOf(GlobalDictionary.TeleProcessorInt));
 
-                GlobalDictionary.HumanPlayerAtttemptedInt = Integer.parseInt(historicallist.get(16));
-                GlobalDictionary.HumanPlayerInt = Integer.parseInt(historicallist.get(17));
+                GlobalDictionary.HumanPlayerAtttemptedInt = Integer.parseInt(historicallist.get(17));
+                GlobalDictionary.HumanPlayerInt = Integer.parseInt(historicallist.get(18));
                 HumanPlayerAttempted.setText(String.valueOf(GlobalDictionary.HumanPlayerAtttemptedInt));
                 HumanPlayer.setText(String.valueOf(GlobalDictionary.HumanPlayerInt));
 
-                GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(18));
+                GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(19));
                 if (GlobalDictionary.endgameRadio == 0) {
                     None.setChecked(true);
                 } else if (GlobalDictionary.endgameRadio == 1) {
@@ -190,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (GlobalDictionary.endgameRadio == 3) {
                     Deep.setChecked(true);
                 }
-                EditTextComments.setText(historicallist.get(19));
+                EditTextComments.setText(historicallist.get(20));
             } else {
                 // Handle error if the list is empty or smaller than expected
             }
@@ -576,6 +578,9 @@ public class MainActivity extends AppCompatActivity {
     public void onSubmit(View view) {
         boolean checked = fieldChecker();
         if (checked) {
+            if(EditTextComments.getText().toString().isEmpty()){
+                EditTextComments.setText("0");
+            }
             android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(MainActivity.this).create();
             alertDialog.setTitle("Alert");
             alertDialog.setMessage("Are you sure you want to submit? Tap anywhere outside of this box to go back.");
@@ -614,7 +619,8 @@ public class MainActivity extends AppCompatActivity {
             //addded string to local file
 
 
-            String Hdata = StudentName.getText().toString() + ","
+            String Hdata =
+                    StudentName.getText().toString() + ","
                     + TeamNumber.getText().toString() + ","
                     + MatchNumber.getText().toString() + ","
                     + GlobalDictionary.LeftStartingInt + ","
@@ -640,17 +646,6 @@ public class MainActivity extends AppCompatActivity {
             GlobalDictionary.historydict.put(MatchNumber.getText().toString(), Hdata);
             GlobalDictionary.keylist.add(MatchNumber.getText().toString());
             Log.d("ListCheck", "List contents: " + GlobalDictionary.historydict.toString());
-
-            SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            JSONObject jsonObject = new JSONObject(GlobalDictionary.historydict);
-            String jsonString = jsonObject.toString();
-
-            editor.putString("dictionaryKey", jsonString);
-            editor.apply();
-
-
-
 
             alertDialog.show();
         }
