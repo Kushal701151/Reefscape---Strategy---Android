@@ -68,11 +68,15 @@ public class MainActivity extends AppCompatActivity {
     public Button HumanPlayerAttemptedMinus;
     public Button HumanPlayerAttemptedPlus;
 
+    public Button AlgaeRemovalMinus;
+    public Button AlgaeRemovalPlus;
+
     public  EditText StudentName;
     public  CheckBox Defense;
     public  EditText MatchNumber;
     public  EditText EditTextComments;
     public TextView HumanPlayerAttempted;
+    public TextView AlgaeRemoval;
     public  TextView HumanPlayer;
     public  TextView TeleBarge;
     public  TextView TeleProcessor;
@@ -100,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
       public static List<String> keylist = new ArrayList<>();;
       public static int LeftStartingInt = 0;
       public static int endgameRadio = 0;
+      public static int AlgaeRemovalInt;
       public static int HumanPlayerInt =0;
       public static int TeleProcessorInt =0;
       public static int TeleBargeInt =0;
@@ -182,7 +187,11 @@ public class MainActivity extends AppCompatActivity {
                 HumanPlayerAttempted.setText(String.valueOf(GlobalDictionary.HumanPlayerAtttemptedInt));
                 HumanPlayer.setText(String.valueOf(GlobalDictionary.HumanPlayerInt));
 
-                GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(19));
+                GlobalDictionary.AlgaeRemovalInt = Integer.parseInt(historicallist.get(19));
+                AlgaeRemoval.setText(String.valueOf(GlobalDictionary.AlgaeRemovalInt));
+
+
+                GlobalDictionary.endgameRadio = Integer.parseInt(historicallist.get(20));
                 if (GlobalDictionary.endgameRadio == 0) {
                     None.setChecked(true);
                 } else if (GlobalDictionary.endgameRadio == 1) {
@@ -192,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (GlobalDictionary.endgameRadio == 3) {
                     Deep.setChecked(true);
                 }
-                EditTextComments.setText(historicallist.get(20));
+                EditTextComments.setText(historicallist.get(21));
             } else {
                 // Handle error if the list is empty or smaller than expected
             }
@@ -277,6 +286,10 @@ public class MainActivity extends AppCompatActivity {
         TeleBargeMinus = (Button) findViewById(R.id.TeleBargeMinus);
         TeleBarge = (TextView) findViewById(R.id.TeleBarge);
         TeleBargePlus = (Button) findViewById(R.id.TeleBargePlus);
+
+        AlgaeRemovalMinus = (Button) findViewById(R.id.AlgaeRemovalMinus);
+        AlgaeRemoval = (TextView) findViewById(R.id.AlgaeRemoval);
+        AlgaeRemovalPlus = (Button) findViewById(R.id.AlgaeRemovalPlus);
 
         TeleProcessorMinus = (Button) findViewById(R.id.TeleProcessorMinus);
         TeleProcessor = (TextView) findViewById(R.id.TeleProcessor);
@@ -500,6 +513,20 @@ public class MainActivity extends AppCompatActivity {
         HumanPlayerAttempted.setText(AutoLowerDisplay);
     }
 
+    public void AlgaeRemovalMinus(View view){
+        if ((!AlgaeRemoval.getText().toString().equals("0"))&&(GlobalDictionary.AlgaeRemovalInt!=0)){ //Prevents negative values
+            GlobalDictionary.AlgaeRemovalInt--;
+            String AutoLowerDisplay = " " + (GlobalDictionary.AlgaeRemovalInt);
+            AlgaeRemoval.setText(AutoLowerDisplay);
+        }
+    }
+    public void AlgaeRemovalPlus (View view){
+        GlobalDictionary.AlgaeRemovalInt ++;
+        String AutoLowerDisplay = " " + (GlobalDictionary.AlgaeRemovalInt);
+        AlgaeRemoval.setText(AutoLowerDisplay);
+    }
+
+
     public void onHistory (View view){
         Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
 
@@ -608,6 +635,7 @@ public class MainActivity extends AppCompatActivity {
                                         + GlobalDictionary.TeleProcessorInt + ","
                                         + GlobalDictionary.HumanPlayerAtttemptedInt + ","
                                         + GlobalDictionary.HumanPlayerInt + ","
+                                        + GlobalDictionary.AlgaeRemovalInt + ","
                                         + GlobalDictionary.endgameRadio + ","
                                         + EditTextComments.getText().toString();
 
@@ -639,6 +667,7 @@ public class MainActivity extends AppCompatActivity {
                     + GlobalDictionary.TeleProcessorInt + ","
                     + GlobalDictionary.HumanPlayerAtttemptedInt + ","
                     + GlobalDictionary.HumanPlayerInt + ","
+                    + GlobalDictionary.AlgaeRemovalInt + ","
                     + GlobalDictionary.endgameRadio + ","
                     + EditTextComments.getText().toString();
             Log.d("Mydata", Hdata);

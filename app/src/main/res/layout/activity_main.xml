@@ -203,9 +203,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Autonomous"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="36sp" />
+                android:textSize="40sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -218,9 +219,9 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/gray"
                 android:onClick="LeftStaring"
-                android:text="Left Starting"
+                android:text="Mobility"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="30sp"
                 android:layout_weight="1.2"/>
 
             <Space
@@ -250,7 +251,7 @@
                 android:text="Coral Pipes"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="35sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -494,8 +495,8 @@
                 android:id="@+id/AutoL3Minus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="AutoL3Minus"
                 android:backgroundTint="@color/orange"
+                android:onClick="AutoL3Minus"
                 android:text="-"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
@@ -523,10 +524,10 @@
                 android:id="@+id/AutoL3Plus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="AutoL3Plus"
-                android:textColor="@color/white"
                 android:backgroundTint="@color/orange"
+                android:onClick="AutoL3Plus"
                 android:text="+"
+                android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <Space
@@ -537,11 +538,11 @@
             <Button
                 android:id="@+id/AutoL4Minus"
                 android:layout_width="wrap_content"
-                android:textColor="@color/white"
                 android:layout_height="60dp"
-                android:onClick="AutoL4Minus"
                 android:backgroundTint="@color/orange"
+                android:onClick="AutoL4Minus"
                 android:text="-"
+                android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <Space
@@ -567,10 +568,10 @@
                 android:id="@+id/AutoL4Plus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="AutoL4Plus"
                 android:backgroundTint="@color/orange"
-                android:textColor="@color/white"
+                android:onClick="AutoL4Plus"
                 android:text="+"
+                android:textColor="@color/white"
                 android:textSize="30sp" />
 
             <Space
@@ -599,7 +600,7 @@
                 android:text="Algae Balls"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="35sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -784,8 +785,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TeleOP"
+                android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="36sp" />
+                android:textSize="40sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -800,7 +802,7 @@
                 android:onClick="Defense"
                 android:text="Defense Bot"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="30sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -823,7 +825,7 @@
                 android:text="Coral Pipes"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="35sp" />
 
         </LinearLayout>
 
@@ -899,7 +901,7 @@
                 android:onClick="TeleL1Minus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -927,7 +929,7 @@
                 android:onClick="TeleL1Plus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -942,7 +944,7 @@
                 android:onClick="TeleL2Minus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -970,7 +972,7 @@
                 android:onClick="TeleL2Plus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1055,7 +1057,7 @@
                 android:onClick="TeleL3Minus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1083,7 +1085,7 @@
                 android:onClick="TeleL3Plus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1098,7 +1100,7 @@
                 android:onClick="TeleL4Minus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1126,7 +1128,7 @@
                 android:onClick="TeleL4Plus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1154,7 +1156,7 @@
                 android:layout_height="wrap_content"
                 android:text="Algae Balls"
                 android:textColor="@color/white"
-                android:textSize="30sp" />
+                android:textSize="35sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -1238,7 +1240,7 @@
                 android:onClick="TeleBargeMinus"
                 android:textColor="@color/white"
                 android:text="-"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1266,7 +1268,7 @@
                 android:onClick="TeleBargePlus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1281,7 +1283,7 @@
                 android:onClick="TeleProcessorMinus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1309,7 +1311,7 @@
                 android:onClick="TeleProcessorPlus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1394,7 +1396,7 @@
                 android:onClick="HumanPlayerAttemptedMinus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1422,7 +1424,7 @@
                 android:onClick="HumanPlayerAttemptedPlus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1437,7 +1439,7 @@
                 android:onClick="HumanPlayerMinus"
                 android:text="-"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1465,7 +1467,7 @@
                 android:onClick="HumanPlayerPlus"
                 android:text="+"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="30sp" />
 
             <Space
@@ -1481,6 +1483,93 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Algae Removed"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/AlgaeRemovalMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="AlgaeRemovalMinus"
+                android:text="-"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange1"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:id="@+id/AlgaeRemoval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+            <Button
+                android:id="@+id/AlgaeRemovalPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:onClick="AlgaeRemovalPlus"
+                android:text="+"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange1"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -1493,8 +1582,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Endgame"
+                android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="33sp" />
+                android:textSize="40sp" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -1631,7 +1721,7 @@
                 android:layout_height="100dp"
                 android:onClick="onSubmit"
                 android:text="Done"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/orange1"
                 android:textSize="40sp" />
 
             <Space
