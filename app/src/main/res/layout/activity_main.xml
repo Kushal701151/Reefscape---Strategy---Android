@@ -219,6 +219,7 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/gray"
                 android:onClick="LeftStaring"
+
                 android:text="Mobility"
                 android:textColor="@color/white"
                 android:textSize="30sp"
@@ -1523,9 +1524,9 @@
 
             <Button
                 android:id="@+id/AlgaeRemovalMinus"
+                android:onClick="AlgaeRemovalMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="AlgaeRemovalMinus"
                 android:text="-"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/orange1"
@@ -1551,9 +1552,9 @@
 
             <Button
                 android:id="@+id/AlgaeRemovalPlus"
+                android:onClick="AlgaeRemovalPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
-                android:onClick="AlgaeRemovalPlus"
                 android:text="+"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/orange1"

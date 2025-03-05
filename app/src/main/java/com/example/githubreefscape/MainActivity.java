@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
       public static List<String> keylist = new ArrayList<>();;
       public static int LeftStartingInt = 0;
       public static int endgameRadio = 0;
-      public static int AlgaeRemovalInt;
+      public static int AlgaeRemovalInt = 0;
       public static int HumanPlayerInt =0;
       public static int TeleProcessorInt =0;
       public static int TeleBargeInt =0;
@@ -143,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
                 MatchNumber.setText(historicallist.get(2));
 
                 GlobalDictionary.LeftStartingInt = Integer.parseInt(historicallist.get(3));
-                Log.d( "DefenseInt: ", String.valueOf(GlobalDictionary.DefenseInt));
                 if (GlobalDictionary.LeftStartingInt== 1){
                     LeftStarting.setChecked(true);
                 }
@@ -310,6 +309,9 @@ public class MainActivity extends AppCompatActivity {
 
         EditTextComments = (EditText) findViewById(R.id.EditTextComments);
         done= (Button) findViewById(R.id.done);
+
+        Defense.setChecked(false);
+        LeftStarting.setChecked(false);
     }
 
     // Auto Levels 1-4
@@ -521,7 +523,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void AlgaeRemovalPlus (View view){
-        GlobalDictionary.AlgaeRemovalInt ++;
+        GlobalDictionary.AlgaeRemovalInt = GlobalDictionary.AlgaeRemovalInt + 1;
         String AutoLowerDisplay = " " + (GlobalDictionary.AlgaeRemovalInt);
         AlgaeRemoval.setText(AutoLowerDisplay);
     }
