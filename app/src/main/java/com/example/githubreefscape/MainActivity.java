@@ -210,9 +210,12 @@ public class MainActivity extends AppCompatActivity {
             GlobalDictionary.AutoL2Int = 0;
             GlobalDictionary.AutoL3Int = 0;
             GlobalDictionary.AutoL4Int = 0;
+            GlobalDictionary.DefenseInt = 0;
+            GlobalDictionary.LeftStartingInt =0;
             GlobalDictionary.AutoBargeInt = 0;
             GlobalDictionary.AutoProcessorInt = 0;
             GlobalDictionary.TeleL1Int = 0;
+            GlobalDictionary.AlgaeRemovalInt = 0;
             GlobalDictionary.TeleL2Int = 0;
             GlobalDictionary.TeleL3Int = 0;
             GlobalDictionary.TeleL4Int = 0;
