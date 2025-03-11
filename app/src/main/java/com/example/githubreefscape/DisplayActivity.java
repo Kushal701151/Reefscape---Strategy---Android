@@ -44,7 +44,6 @@ public class DisplayActivity extends AppCompatActivity{
         setContentView(R.layout.activity_display);
 
         // Initialize views
-        datakeep = findViewById(R.id.keepdata);
         iv = findViewById(R.id.iv);
         nextMatch = findViewById(R.id.NextMatchBtn);
         dataToText = findViewById(R.id.dataToTextTxtView);
