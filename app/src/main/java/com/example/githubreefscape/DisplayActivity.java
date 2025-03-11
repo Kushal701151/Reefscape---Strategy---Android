@@ -8,6 +8,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,9 @@ public class DisplayActivity extends AppCompatActivity{
     private ImageView iv;
     private TextView dataToText;
     private Button nextMatch;
+
+    public static int datakeepint = 0;
+    public CheckBox datakeep;
     private Bitmap bitmap;
 
     private static final String IMAGE_DIRECTORY = "/QRcodes";
@@ -40,6 +44,7 @@ public class DisplayActivity extends AppCompatActivity{
         setContentView(R.layout.activity_display);
 
         // Initialize views
+        datakeep = findViewById(R.id.keepdata);
         iv = findViewById(R.id.iv);
         nextMatch = findViewById(R.id.NextMatchBtn);
         dataToText = findViewById(R.id.dataToTextTxtView);
@@ -66,6 +71,14 @@ public class DisplayActivity extends AppCompatActivity{
         } catch (WriterException e) {
             Toast.makeText(this, "Error generating QR Code!", Toast.LENGTH_SHORT).show();
             Log.e("QRGenError", "WriterException", e);
+        }
+    }
+
+    public void datakeep (View view){
+        if(datakeep.isChecked()){
+            datakeepint = 1;
+        }else{
+            datakeepint = 0;
         }
     }
 

@@ -1,5 +1,7 @@
  package com.example.githubreefscape;
 
+import static com.example.githubreefscape.DisplayActivity.datakeepint;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -133,10 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
         String pagers = getIntent().getStringExtra("FROM_WINDOW");
         Log.d("Debug", "Aut" + pagers);
-
         if(Objects.equals(pagers, "Historical")){
-            // Update other fields as needed
-            // Update UI elements
             if (historicallist != null && historicallist.size() >= 20) {
                 StudentName.setText(historicallist.get(0));
                 TeamNumber.setText(historicallist.get(1));
@@ -206,6 +205,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }else{
+
+            ArrayList<String> historicallistv2 = pager.getStringArrayListExtra("historicallist");
+
             GlobalDictionary.AutoL1Int = 0;
             GlobalDictionary.AutoL2Int = 0;
             GlobalDictionary.AutoL3Int = 0;
@@ -223,11 +225,19 @@ public class MainActivity extends AppCompatActivity {
             GlobalDictionary.TeleProcessorInt = 0;
             GlobalDictionary.HumanPlayerAtttemptedInt = 0;
             GlobalDictionary.HumanPlayerInt = 0;
+            TeamNumber.setText("");
+            Log.d( "datakeep: ", String.valueOf(datakeepint));
+
+            if (datakeepint == 1) {
+                StudentName.setText(historicallistv2.get(0));
+                MatchNumber.setText(historicallistv2.get(2));
+            }else {
+
+            }
         }
-
-
-
     }
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -677,6 +687,7 @@ public class MainActivity extends AppCompatActivity {
                     + EditTextComments.getText().toString();
             Log.d("Mydata", Hdata);
             //history code
+
             GlobalDictionary.historydict.put(MatchNumber.getText().toString(), Hdata);
             GlobalDictionary.keylist.add(MatchNumber.getText().toString());
             Log.d("ListCheck", "List contents: " + GlobalDictionary.historydict.toString());
